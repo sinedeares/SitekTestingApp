@@ -1,0 +1,16 @@
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.csproj.AssemblyReference.cache
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.csproj.SuggestedBindingRedirects.cache
+D:\csharp\projects\SitekTestingApp\obj\Debug\MainWindow.g.cs
+D:\csharp\projects\SitekTestingApp\obj\Debug\App.g.cs
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp_MarkupCompile.cache
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp_MarkupCompile.lref
+D:\csharp\projects\SitekTestingApp\bin\Debug\SitekTestingApp.exe.config
+D:\csharp\projects\SitekTestingApp\bin\Debug\SitekTestingApp.exe
+D:\csharp\projects\SitekTestingApp\bin\Debug\SitekTestingApp.pdb
+D:\csharp\projects\SitekTestingApp\obj\Debug\MainWindow.baml
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.g.resources
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.Properties.Resources.resources
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.csproj.GenerateResource.cache
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.csproj.CoreCompileInputs.cache
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.exe
+D:\csharp\projects\SitekTestingApp\obj\Debug\SitekTestingApp.pdb
