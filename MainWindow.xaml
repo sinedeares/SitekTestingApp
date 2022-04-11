@@ -6,14 +6,25 @@
         xmlns:local="clr-namespace:SitekTestingApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="908" Width="800"
-        MinWidth="1200" MinHeight="900">
+        MinWidth="1200" MinHeight="950">
     <Grid>
-        <DataGrid x:Name="DataGrid" Margin="67,199,67,93" LoadingRow="dataGrid_LoadingRow" ColumnWidth="*" Height="600"/>
-        <Button x:Name="OpenFileRKKButton" Content="Выбрать первый файл" HorizontalAlignment="Left" Margin="49,30,0,0" VerticalAlignment="Top" Height="26" Width="155" Click="openFileRKKButton_Click" />
-        <Button x:Name="OpenFileAppealsButton" Content="Выбрать второй файл" HorizontalAlignment="Left" Margin="49,71,0,0" VerticalAlignment="Top" Width="155" Height="25" Click="openFileAppealsButton_Click"/>
-        <TextBlock x:Name="TextBlockRKK" HorizontalAlignment="Left" Margin="222,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="25"/>
-        <TextBlock x:Name="TextBlockAppeals" HorizontalAlignment="Left" Margin="222,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="25"/>
-        <Button x:Name="ButtonLoad" Content="Записать в форму" HorizontalAlignment="Left" Margin="49,125,0,0" VerticalAlignment="Top" Height="25" Width="155" Click="ButtonLoad_Click"/>
+        
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,30,0,0" Height= "90" Width="155">
+            <Button x:Name="OpenFileRKKButton" Content="Выбрать файл РКК" VerticalAlignment="Top" Height="26"  Click="openFileRKKButton_Click" />
+            <Button x:Name="OpenFileAppealsButton" Content="Выбрать файл обращений" Margin="0,5,0,0" VerticalAlignment="Top"  Height="25" Click="openFileAppealsButton_Click"/>
+            <Button x:Name="ButtonLoad" Content="Записать в форму" Margin="0,5,0,0"  VerticalAlignment="Top" Height="25" Click="ButtonLoad_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="229,30,0,0" Height="50">
+            <TextBlock x:Name="TextBlockRKK" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="25"/>
+            <TextBlock x:Name="TextBlockAppeals" Margin="0,5,0,0" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Height="25"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="453,30,0,0" Height="70" Width="355">
+            <TextBlock x:Name="Total" />
+            <TextBlock x:Name="TotalRKK" Margin="0,5,0,0" />
+            <TextBlock x:Name="TotalAppeals" Margin="0,5,0,0" />
+        </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="67,164,-57,693" Height="35">
             <TextBlock x:Name="TextBlockSort" Text="Выбрать сортировку:"  FontSize="18"/>
@@ -23,9 +34,10 @@
             <Button x:Name="ButtonGeneralSort" Content="По общему кол-ву" Click="ButtonGeneralSort_Click" Margin="5" Width="110"/>
         </StackPanel>
 
-        <TextBlock x:Name="Total"  Margin="453,19,583,849"/>
-        <TextBlock x:Name="TotalRKK" Margin="453,48,629,822"/>
-        <TextBlock x:Name="TotalAppeals"  Margin="453,76,657,793"/>
+        <StackPanel Margin="67,205,67,93" HorizontalAlignment="Center" Width="600" Height="600">
+            <DataGrid x:Name="DataGrid"  LoadingRow="dataGrid_LoadingRow" Width="600" ColumnWidth="*" Height="600"/>
+        </StackPanel>
+
         <StackPanel Orientation="Horizontal" Margin="0,818,10,24" Height="30">
             <TextBlock x:Name="TextBlockTodayDate" HorizontalAlignment="Left"  Width="265" FontSize="15" Margin="70,10,0,0"/>
             <TextBlock x:Name="TextBlock" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Время работы программы:" VerticalAlignment="Top" FontSize="15" Margin="150,7,0,0"/>

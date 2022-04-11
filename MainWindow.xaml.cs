@@ -217,6 +217,7 @@ namespace SitekTestingApp
             else MessageBox.Show("Вы выбрали не все файлы!");
         }
 
+        private string sortType;
         private void ButtonNameSort_Click(object sender, RoutedEventArgs e)
         {
             if (performerList != null)
@@ -230,6 +231,7 @@ namespace SitekTestingApp
                 }).OrderBy((p => p.Name)).ToList();
                 DataGridCellsFillng();
                 HeaderAdding();
+                sortType = "Сортировка по фамилии ответственного исполнителя";
             }
             else
                 MessageBox.Show("Данные не заполнены!");
@@ -248,6 +250,7 @@ namespace SitekTestingApp
                 }).OrderByDescending((p => p.CountRKK)).ThenByDescending(p => p.CountAppeals).ToList();
                 DataGridCellsFillng();
                 HeaderAdding();
+                sortType = "Сортировка по количеству неисполненных входящих документов";
             }
             else
                 MessageBox.Show("Данные не заполнены!");
@@ -266,6 +269,7 @@ namespace SitekTestingApp
                 }).OrderByDescending((p => p.CountAppeals)).ThenByDescending(p => p.CountRKK).ToList();
                 DataGridCellsFillng();
                 HeaderAdding();
+                sortType = "Сортировка по количеству неисполненных письменных обращений граждан";
             }
             else
                 MessageBox.Show("Данные не заполнены!");
@@ -284,6 +288,7 @@ namespace SitekTestingApp
                 }).OrderByDescending((p => p.CountGeneral)).ThenByDescending(p => p.CountRKK).ToList();
                 DataGridCellsFillng();
                 HeaderAdding();
+                sortType = "Сортировка по общему количеству документов и обращений";
             }
             else
                 MessageBox.Show("Данные не заполнены!");
@@ -306,6 +311,7 @@ namespace SitekTestingApp
                     writer.WriteLine(Total.Text);
                     writer.WriteLine(TotalRKK.Text);
                     writer.WriteLine(TotalAppeals.Text);
+                    writer.WriteLine(sortType);
                     writer.WriteLine();
                     writer.WriteLine("{0,4} |{1,20} |{2,11} |{3,16}|{4,13} ",
                         "№", "Исполнитель", "Кол-во ркк", "Кол-во обращений", "Общее кол-во");
@@ -316,6 +322,8 @@ namespace SitekTestingApp
                         writer.WriteLine("{0,4} |{1,20} |{2,11} |{3,15} |{4,13} ",
                             i++, item.Name, item.CountRKK, item.CountAppeals, item.CountGeneral);
                     }
+                    writer.WriteLine();
+                    writer.WriteLine(TextBlockTodayDate.Text);
                 }
             }
         }
